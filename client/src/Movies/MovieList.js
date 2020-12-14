@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 export default function MovieList(props) {
   return (
     <div className="movie-list">
+      
       {props.movies.map(movie => (
-        <MovieDetails key={movie.id} movie={movie} />
+        <Link to={`/movies/${movie.id}`}> 
+          <MovieDetails key={movie.id} movie={movie} />
+        </Link>
       ))}
     </div>
   );
@@ -15,7 +19,7 @@ function MovieDetails(props) {
 
   return (
     <div className="movie-card">
-      <h2>{title}</h2>
+        <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
       </div>
