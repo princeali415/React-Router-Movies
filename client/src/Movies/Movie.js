@@ -6,6 +6,7 @@ export default function Movie(props) {
   const [movie, setMovie] = useState();
 
   const {id} = useParams();
+  
   console.log(id)
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL --DONE
 
